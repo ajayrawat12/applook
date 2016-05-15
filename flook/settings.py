@@ -25,7 +25,7 @@ SECRET_KEY = 'im^hz4b!m-9v*h86^)o#@87$z7kdajwp3woa$5vncs%$)268e-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ajayrawat.pythonanywhere.com',]
 
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_HOST_USER = "dev.facelook@gmail.com"
