@@ -21,11 +21,11 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^cards/', include('apps.cards.urls')),
     url(r'^users/', include('apps.users.urls')),
+    url(r'^comments/', include('apps.comments.urls')),
     url(r'^$', 'apps.users.views.home', name="home"),
     url(r'^about/$', 'apps.users.views.about', name="about"),
     url(r'^contact/$', 'apps.users.views.contact', name="contact"),
 ]
-
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'im^hz4b!m-9v*h86^)o#@87$z7kdajwp3woa$5vncs%$)268e-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['ajayrawat.pythonanywhere.com',]
+ALLOWED_HOSTS = ['localhost:8000', 'ajayrawat.pythonanywhere.com', ]
 
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_HOST_USER = "dev.facelook@gmail.com"
@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'apps.cards',
     'apps.users',
+    'apps.comments',
 )
 
 MIDDLEWARE_CLASSES = (

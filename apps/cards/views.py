@@ -2,9 +2,9 @@ from django.shortcuts import HttpResponseRedirect
 from django.shortcuts import render
 from .models import Cards
 from django.core.context_processors import csrf
-from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from apps.users.models import UserProfile
+from apps.comments.models import Comments
 
 # Create your views here.
 
@@ -32,6 +32,7 @@ def view_card(request, card_id):
         context = {
             'card': card,
             'message': "public",
+            'comments': Comments.objects.filter(cards=Cards.objects.get(id=card_id))
 
         }
         context.update(csrf(request))
